@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class VendingMachine
+{ 
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        Liquid Bottles = new Liquid();
+        
+        for( int t = 0; t < 3; t++ ) 
+        {
+            
+            System.out.println(Bottles.Drinks[t][0] + " " + Bottles.Drinks[t][1] + " " + Bottles.Qnty[t]);
+        }
+        System.out.println("Enter 0-5");
+        int subtraction = Integer.parseInt(scan.nextLine());   
+        if (subtraction == 0)
+        Bottles.Qnty[0] = 5;
+       
+        for( int t = 0; t < 3; t++ ) 
+        {
+            
+            System.out.println(Bottles.Drinks[t][0] + " " + Bottles.Qnty[t]);
+        }        
+    }
+        
+    public void Controls()
+    {
+        System.out.println("Enter 0-5");
+    }
+
+
+     
+}
